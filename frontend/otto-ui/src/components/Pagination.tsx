@@ -12,8 +12,12 @@ function PaginationExample(totalPages: number, selectedPage: number) {
 
   return (
     <Pagination>
-      <Pagination.First />
-      <Pagination.Prev />
+      <Pagination.First onClick = {() => {
+        dispatch(productSlice.actions.setPage(1))
+      }}/>
+      <Pagination.Prev onClick = {() => {
+        dispatch(productSlice.actions.setPage(selectedPage - 1))
+      }}/>
     
       <Pagination.Ellipsis />
 
@@ -26,8 +30,14 @@ function PaginationExample(totalPages: number, selectedPage: number) {
             }}>{i}</Pagination.Item>
       )}
       <Pagination.Ellipsis />
-      <Pagination.Next />
-      <Pagination.Last />
+      <Pagination.Next onClick = {() => {
+        if(selectedPage !== totalPages) {
+          dispatch(productSlice.actions.setPage(selectedPage + 1))
+        }
+      }}/>
+      <Pagination.Last onClick = {() => {
+        dispatch(productSlice.actions.setPage(totalPages))
+      }}/>
     </Pagination>
   );
 }

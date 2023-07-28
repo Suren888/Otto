@@ -47,6 +47,9 @@ const sliceProduct = createSlice({
             }
         },
         setPage(state, action: PayloadAction<number>) {
+            if(action.payload <= 0) {
+                return;
+            }
             state.selectedPage = action.payload
         },
         setToggleLeftBarPage(state, action: PayloadAction<boolean>) {
