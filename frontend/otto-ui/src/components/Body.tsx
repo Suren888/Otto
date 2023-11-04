@@ -29,6 +29,7 @@ const Body = () => {
 
 
   useEffect(() => {
+    console.log("body")
     const categoryIdFromUrl = getCategory(location)
     console.log(categoryIdFromUrl);
     dispatch(productSlice.actions.setSelectedCategoryId(categoryIdFromUrl))

@@ -19,6 +19,7 @@ export const SideBarLeft = () => {
   useEffect(() => {
     CategoryDataService.getAll()
     .then((response: any) => {
+      console.log(response.data)
       setCategories(response.data)
       
     })

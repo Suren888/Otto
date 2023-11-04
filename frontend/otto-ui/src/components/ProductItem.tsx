@@ -2,14 +2,13 @@ import React from 'react';
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import { IProductData } from '../types/product-type';
 
 const ProductItem = ( props : IProductData) => {
   console.log(props);
   
- return <Card onClick={() => {
-  window.location.href = `/otto/products/${props.id}`;
- }}
+ return <Link to={`/otto/products/${props.id}`}><Card  
  style={{ width: '18rem', display: 'inline-block', margin: '5px' }}>
       <Card.Img variant="top" src={props.pictures[0].src} />
       <Card.Body>
@@ -20,7 +19,7 @@ const ProductItem = ( props : IProductData) => {
         </Card.Text>
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
-    </Card>
+    </Card></Link>
   };
 
 

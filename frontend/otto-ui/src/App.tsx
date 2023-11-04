@@ -17,10 +17,12 @@ const App = () => {
     <div className="App">
       <TopBar/>
       <SideBarLeft />
-        <Routes>
+      <Body/>
+        {/* <Routes>
           <Route path='/products/*' element={<Body />} />
           <Route path='/products/:id' element={<ProductView />} />
-        </Routes>
+        </Routes> */}
+        
     </div>
           <FooterWrapper/>
           </>
