@@ -14,7 +14,7 @@ function TopBar() {
     return (
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="/otto/products">OTTO-ARM</Navbar.Brand>
+          <Navbar.Brand href="/">OTTO-ARM</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

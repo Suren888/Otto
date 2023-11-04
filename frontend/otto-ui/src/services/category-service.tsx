@@ -3,31 +3,31 @@ import ICategoryData from "../types/category-type"
 
 class CategoryDataService {
   getAll() {
-    return http.get<Array<ICategoryData>>("/api/categories");
+    return http.get<Array<ICategoryData>>("/categories");
   }
 
   get(id: string) {
-    return http.get<ICategoryData>(`/api/Categoryies/${id}`);
+    return http.get<ICategoryData>(`/Categoryies/${id}`);
   }
 
   create(data: ICategoryData) {
-    return http.post<ICategoryData>("/api/Categories", data);
+    return http.post<ICategoryData>("/Categories", data);
   }
 
   update(data: ICategoryData, id: any) {
-    return http.put<any>(`/api/Categories/${id}`, data);
+    return http.put<any>(`/Categories/${id}`, data);
   }
 
   delete(id: any) {
-    return http.delete<any>(`/api/Categories/${id}`);
+    return http.delete<any>(`/Categories/${id}`);
   }
 
   deleteAll() {
-    return http.delete<any>(`/api/Category`);
+    return http.delete<any>(`/Category`);
   }
 
   findByTitle(title: string) {
-    return http.get<Array<ICategoryData>>(`/api/Categories?title=${title}`);
+    return http.get<Array<ICategoryData>>(`/Categories?title=${title}`);
   }
 }
 
