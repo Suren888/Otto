@@ -33,6 +33,10 @@ const router = createBrowserRouter([
     element: <AppProvider />,
   },
   {
+    path: "otto/products/category/*",
+    element: <AppProvider />,
+  },
+  {
     path: "otto/products/*",
     element: <ProductView />,
   },
